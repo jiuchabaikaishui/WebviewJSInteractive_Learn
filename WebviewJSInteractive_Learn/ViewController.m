@@ -74,7 +74,7 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"function button1Action(){return '哈哈';}"]];
+    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"var test = {}; (function initialize()  {    test.showMessageAction = function showMessageAction(){ alert('哈哈');    };   })()"]];
 }
 
 #pragma mark - 自定义方法
